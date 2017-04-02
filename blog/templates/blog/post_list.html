@@ -3,13 +3,25 @@
         <title>Kiki's blog</title>
     </head>
     <body>
+        <div>
+           <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
 
-        <p><b>Hi</b> there!</p>
-        <p>It <i>works</i>!</p>
-<em>text 1</em>
-<strong>text 2</strong>
-		
-		<a href="https://djangogirls.org">link to djangogirls</a>
-		<ul><li>primo elemento</li><li>secondo elemento</li></ul>    
+        <div>
+        <h3>
+            <strong>Workshop of the 2nd of April in Florence -</strong>
+            <em>Kiki's page</em>
+        </h3>
+        </div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+        </div>    
 	</body>
 </html>

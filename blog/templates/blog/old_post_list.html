@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Kiki's blog</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+            <p><b>Hi</b> there!</p>
+            </h1>
+
+            <p>It <i>works</i>!</p>
+            <em>text 1</em>
+            <strong>text 2</strong>
+	   </div>
+
+        <div>
+		<a href="https://djangogirls.org">link to djangogirls</a>
+		<ul><li>primo elemento</li><li>secondo elemento</li></ul>
+        {% for post in posts %}
+        {{ post }}
+        {% endfor %}
+        </div>    
+	</body>
+</html>
